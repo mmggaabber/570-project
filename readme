@@ -1,1 +1,11 @@
-hello
+This is the code implementation of my final project for Phys 570 at Purdue University. I have a walkthrough of this presentation here:
+
+In this project I use ML to solve physics/science MCQ questions. In summary, the project contained these components:
+
+1- Baseline model using external API (from Huggingface) where I called the API to solve each question
+2- BERT model with a softmax function 
+3- FineTuning BERT (learning rate, Epochs, BatchSize, Sequence Length, Number of multihead encoders)
+4- Incorporating RAG (Retrieval Augmented Generation) by using Cohere's wikipedia embedding of science wiki articles, using Cohere's "multilingual-22-12" model to also embedd the questions, then using FAISS to match each question to
+most similar article to create a new dataset having context in it and then running finetuned BERT again on this new dataset. 
+
+
